@@ -29,6 +29,10 @@ The first block is what you want to benchmark. The second block returns the aver
 
 `[IMBenchmark setIterationCount:10001]`
 
+## But why no Swift?!?
+
+Right now this code is using a semi-private function of the libdispatch library called `dispatch_benchmark()` which unfortunately needs a declaration to use. I couldn't get a Swift project or playground to recognize this function, but I may not know enough about Sewift and so I could have been doing that wrong. In the meantime, I recommend using a bridging header and calling the ObjC version from Swift.
+
 ## License
 
 IMBenchmark is licensed under the standard MIT License and can be found [here](License.md).
