@@ -12,7 +12,7 @@
 
 or
 
-* Add IMBenchmark.{h,m} to your project
+* Add `IMBenchmark.{h,m}` to your project
 * `#import "IMBenchmark.h"` in the class you want to benchmark
 
 ## Using
