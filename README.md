@@ -14,10 +14,10 @@
 
 ```objc
 [IMBenchmark benchmark:^{
-        NSArray *a = [NSArray new];
-    } completion:^(uint64_t nanoseconds) {
-        NSLog(@"%llu ns", nanoseconds);
-    }];
+    NSArray *a = [NSArray new];
+} completion:^(uint64_t nanoseconds) {
+    NSLog(@"%llu ns", nanoseconds);
+}];
 ```
 
 The first block is what you want to benchmark. The second block returns the average run time of that block in nanoseconds.
