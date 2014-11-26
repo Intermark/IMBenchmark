@@ -6,6 +6,8 @@
 
 `IMBenchmark` should not be used in production or release versions. This is for testing and profiling only. Leaving this code in release versions of your app could slow it down waaaaay more than what you were testing would.
 
+To read more about benchmarking in regards to iOS apps, I recommend this really good post by [mattt](https://github.com/mattt) on NSHipster: [http://nshipster.com/benchmarking/](http://nshipster.com/benchmarking/).
+
 ## Installing
 
 `pod 'IMBenchmark'`
