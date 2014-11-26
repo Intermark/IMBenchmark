@@ -1,4 +1,4 @@
-# IMBenchmark
+![banner](/Resources/banner.png)
 
 ## About
 
@@ -14,13 +14,15 @@
 
 ```objc
 [IMBenchmark benchmark:^{
-    NSArray *a = [NSArray new];
+    // Code to benchmark here
 } completion:^(uint64_t nanoseconds) {
     NSLog(@"%llu ns", nanoseconds);
 }];
 ```
 
-The first block is what you want to benchmark. The second block returns the average run time of that block in nanoseconds.
+The first block is what you want to benchmark. The second block returns the average run time of the first block in nanoseconds. This method runs the block 10,000 times and averages the results to prevent anomalies in the benchmarking process. To change the number of iterations during the benchmarking process, call this method before running the above code:
+
+`[IMBenchmark setIterationCount:10001]`
 
 ## License
 

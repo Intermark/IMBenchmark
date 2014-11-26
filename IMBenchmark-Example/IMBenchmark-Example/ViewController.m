@@ -19,9 +19,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    // Set Up Benchmarking (optional, default is 10,000)
+    [IMBenchmark setIterationCount:10001];
+    
     // Benchmark
     [IMBenchmark benchmark:^{
-        NSArray *a = [NSArray new];
+        [NSArray new];
     } completion:^(uint64_t nanoseconds) {
         NSLog(@"%llu ns", nanoseconds);
     }];
